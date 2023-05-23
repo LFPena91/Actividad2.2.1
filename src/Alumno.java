@@ -1,20 +1,47 @@
+import java.util.List;
+
 public class Alumno {
-    private String nombre;
-    private int edad;
-    private String materia1;
-    private String materia2;
-    public void alumno (String nombre, int edad){
-        this.nombre = nombre;
-        this.edad = edad;
-        materia1 = (String) Asignatura.asignatura();
-        materia2 = (String) Asignatura.asignatura();
+    @Override
+    public String toString() {
+        return "Alumno{" +
+                "nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                ", listaAsignaturas=" + listaAsignaturas +
+                '}';
     }
 
+    private String nombre;
+    private int edad;
+    private List<Asignatura> listaAsignaturas;
+    public Alumno(){
+    }
+    public Alumno(String nombreA, int edad, List<Asignatura> listaAsignaturas) {
+        this.nombre = nombreA;
+        this.edad = edad;
+        this.listaAsignaturas = listaAsignaturas;
+    }
     public void imprimir(){
         System.out.println("Nombre: " + nombre);
         System.out.println("Edad: " + edad);
-        System.out.println("Materias: ");
-        System.out.println(materia1);
-        System.out.println(materia2);
+        System.out.println("Asignaturas" + listaAsignaturas.toString());
+    }
+    //Getters and setters
+    public List<Asignatura> getListaAsignaturas() {
+        return listaAsignaturas;
+    }
+    public void setListaAsignaturas(List<Asignatura> listaAsignaturas) {
+        this.listaAsignaturas = listaAsignaturas;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public int getEdad() {
+        return edad;
+    }
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 }
