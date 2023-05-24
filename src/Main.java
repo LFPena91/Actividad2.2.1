@@ -3,25 +3,22 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-    Alumno Luis = new Alumno();
-    Luis.setNombre("Luis");
-    Luis.setEdad(32);
-    List<Asignatura> asignaturasLuis = new ArrayList<Asignatura>();
-    Luis.setListaAsignaturas(asignaturasLuis);
+    Alumno Alumno1 = new Alumno();
+    Alumno1.setNombre("Luis");
+    Alumno1.setEdad(32);
 
-    Asignatura Calculo = new Asignatura("Calculo");
-    Asignatura LPOO = new Asignatura("LPOO");
-    Asignatura Fisica = new Asignatura("Fisica");
-    Asignatura Comunicaciones = new Asignatura("Comunicaciones");
+    List<Asignatura> listaAsignaturas = new ArrayList<Asignatura>();
 
-    asignaturasLuis.add(Calculo);
-    Calculo.setNota(4.5);
-    Calculo.resultado();
-    asignaturasLuis.add(LPOO);
-    LPOO.setNota(4);
-    LPOO.resultado();
+    Asignatura Calculo = new Asignatura("Calculo",3.5);
+    Asignatura LPOO = new Asignatura("LPOO",4);
 
-    Luis.imprimir();
-        System.out.println(Luis.getListaAsignaturas().toString());
+    listaAsignaturas.add(Calculo);
+    listaAsignaturas.add(LPOO);
+
+    Alumno1.setListaAsignaturas(listaAsignaturas);
+
+        System.out.println("El estudiante: " + Alumno1.getNombre() + ", edad: " +
+                Alumno1.getEdad() + ", esta viendo las asignaturas: " + Alumno1.getListaAsignaturas());
+
     }
 }

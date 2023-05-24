@@ -3,13 +3,13 @@ import java.util.Scanner;
 public class Asignatura {
     @Override
     public String toString() {
-        return "Asignatura{}";
+        return "Asignatura{ Nombre: " + nombre +
+                " nota: " + nota + "}";
     }
 
     private static String nombre;
     private static double nota;
-    public Asignatura(String nombre){
-
+    public Asignatura(){
     }
     public Asignatura(String nombre, double nota){
         this.nombre = nombre;
