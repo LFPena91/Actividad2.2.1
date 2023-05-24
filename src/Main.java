@@ -22,5 +22,6 @@ public class Main {
     LPOO.resultado();
 
     Luis.imprimir();
+        System.out.println(Luis.getListaAsignaturas().toString());
     }
 }

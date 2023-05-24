@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Asignatura {
     @Override
     public String toString() {
-        return "Asignatura: " + nombre + " " + nota;
+        return "Asignatura{}";
     }
 
     private static String nombre;
