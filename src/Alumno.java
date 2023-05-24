@@ -20,11 +20,11 @@ public class Alumno {
         this.edad = edad;
         this.listaAsignaturas = listaAsignaturas;
     } // constructor de objetos, con todos los atributos
-    public void imprimir(){
+    /*public void imprimir(){
         System.out.println("Nombre: " + nombre);
         System.out.println("Edad: " + edad);
         System.out.println("Asignaturas: " + listaAsignaturas);
-    } //creo un metodo para imprimir el nombre, la edad de un estudiante y las asignaturas q esta cursando
+    }*/ //creo un metodo para imprimir el nombre, la edad de un estudiante y las asignaturas q esta cursando
     //Getters and setters
     public List<Asignatura> getListaAsignaturas() {
         return listaAsignaturas;
