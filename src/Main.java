@@ -16,9 +16,7 @@ public class Main {
     listaAsignaturas.add(LPOO);
 
     Alumno1.setListaAsignaturas(listaAsignaturas);
-
-        System.out.println("El estudiante: " + Alumno1.getNombre() + ", edad: " +
-                Alumno1.getEdad() + ", esta viendo las asignaturas: " + Alumno1.getListaAsignaturas());
+    Alumno1.imprimir();
 
     }
 }

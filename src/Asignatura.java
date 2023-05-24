@@ -5,16 +5,16 @@ public class Asignatura {
     public String toString() {
         return "Asignatura{ Nombre: " + nombre +
                 " nota: " + nota + "}";
-    }
-
+    } // tostring para definir la forma de impresion
+    //creo los atributos de los objetos
     private static String nombre;
     private static double nota;
     public Asignatura(){
-    }
+    }//constructor de objetos vacio
     public Asignatura(String nombre, double nota){
         this.nombre = nombre;
         this.nota = nota;
-    }
+    }//constructor de objetos, con todos los atributos
     public void resultado (){ //Metodo para definir si aprobo o reprobo
         if (nota >= 3.5) {
             System.out.println("Aprobado");
