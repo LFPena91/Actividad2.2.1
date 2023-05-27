@@ -1,28 +1,32 @@
 import java.util.Scanner;
 
 public class Asignatura {
-    @Override
-    public String toString() {
-        return "Asignatura{ Nombre: " + nombre +
-                " nota: " + nota + "}";
-    } // tostring para definir la forma de impresion
-    //creo los atributos de los objetos
-    private static String nombre;
-    private static double nota;
-    public Asignatura(){
-    }//constructor de objetos vacio
+
+    //creo los atributos de los objetos Asignatura
+    private String nombre;
+    private double nota;
+
+        //Constructor de objetos, solo con 1 atributo
+    public Asignatura(String nombre){
+        this.nombre = nombre;
+    }
+
+        //constructor de objetos, con todos los atributos
     public Asignatura(String nombre, double nota){
         this.nombre = nombre;
         this.nota = nota;
-    }//constructor de objetos, con todos los atributos
-    public void resultado (){ //Metodo para definir si aprobo o reprobo
+    }
+
+        //Metodo para definir si aprobo o reprobo
+    public void resultado (){
         if (nota >= 3.5) {
             System.out.println("Aprobado");
         } else {
             System.out.println("Reprobado");
         }
     }
-    // Getters and setters
+
+        // Getters and setters
     public double getNota() {
         return nota;
     }
@@ -32,4 +36,12 @@ public class Asignatura {
     public String getNombre() {
         return nombre;
     }
+
+        // tostring para definir la forma de impresion
+    @Override
+    public String toString() {
+        return "Asignatura{ Nombre: " + nombre +
+                " nota: " + nota + "}";
+    }
+
 }
