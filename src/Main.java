@@ -61,7 +61,6 @@ public class Main {
         switch (a){
             case 1:
                 Alumno1.imprimir();//llamo el metodo imprimir de Alumno
-
                 //Recorro cada uno de los campos de la lista, para que me imprima el valor que hay alli.
                 //y llamo el metodo resultado, para que me diga si esa asignatura fue aprobada o no.
                 for(int i = 0; i < Alumno1.getListaAsignaturas().size(); i++) {
