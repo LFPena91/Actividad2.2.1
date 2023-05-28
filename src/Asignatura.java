@@ -16,6 +16,14 @@ public class Asignatura {
         this.nombre = nombre;
         this.nota = nota;
     }
+    public static Asignatura leer(){
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Asignatura: ");
+        String nombre = teclado.next();
+        System.out.println("Nota: ");
+        double nota = teclado.nextDouble();
+        return new Asignatura(nombre,nota);
+    }
 
         //Metodo para definir si aprobo o reprobo
     public void resultado (){
@@ -37,11 +45,10 @@ public class Asignatura {
         return nombre;
     }
 
-        // tostring para definir la forma de impresion
+        // tostring para definir la forma de impresion de las listas
     @Override
     public String toString() {
-        return "Asignatura{ Nombre: " + nombre +
-                " nota: " + nota + "}";
+        return nombre + " - nota: " + nota;
     }
 
 }

@@ -11,16 +11,17 @@ public class Alumno {
     }
 
         // constructor de objetos, con todos los atributos
-    public Alumno(String nombreA, int edad, List<Asignatura> listaAsignaturas) {
-        this.nombre = nombreA;
+    public Alumno(String nombre, int edad, List<Asignatura> listaAsignaturas) {
+        this.nombre = nombre;
         this.edad = edad;
         this.listaAsignaturas = listaAsignaturas;
     }
-    /*public void imprimir(){
+    //creo un metodo para imprimir el nombre, la edad de un estudiante y las asignaturas q esta cursando
+    public void imprimir(){
         System.out.println("Nombre: " + nombre);
         System.out.println("Edad: " + edad);
         System.out.println("Asignaturas: " + listaAsignaturas);
-    }*/ //creo un metodo para imprimir el nombre, la edad de un estudiante y las asignaturas q esta cursando
+    }
 
         //Getters and setters
     public List<Asignatura> getListaAsignaturas() {
@@ -41,14 +42,13 @@ public class Alumno {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-
-        // tostring para definir la forma de impresion
-    @Override
-    public String toString() {
-        return "Alumno{" +
-                "nombre='" + nombre + '\'' +
-                ", edad=" + edad +
-                ", listaAsignaturas=" + listaAsignaturas +
-                '}';
+    //Creo el metodo para buscar el promedio de las asignaturas.
+    public void promedio() {
+        double suma = 0;
+        for (int x = 0; x < listaAsignaturas.size(); x++) {
+            suma = suma + listaAsignaturas.get(x).getNota();
+        }
+        double promedio = suma/listaAsignaturas.size();
+        System.out.println("El promedio de " + nombre + " es: " + promedio);
     }
 }
