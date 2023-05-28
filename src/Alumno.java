@@ -45,8 +45,8 @@ public class Alumno {
     //Creo el metodo para buscar el promedio de las asignaturas.
     public void promedio() {
         double suma = 0;
-        for (int x = 0; x < listaAsignaturas.size(); x++) {
-            suma = suma + listaAsignaturas.get(x).getNota();
+        for (int i = 0; i < listaAsignaturas.size(); i++) {
+            suma = suma + listaAsignaturas.get(i).getNota();
         }
         double promedio = suma/listaAsignaturas.size();
         System.out.println("El promedio de " + nombre + " es: " + promedio);
