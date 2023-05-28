@@ -95,7 +95,7 @@ public class Main {
                                 Alumno1.getListaAsignaturas().get(i).setNota((double) (Math.random()*5));
                             }
 
-                            //imprimo nuevamente las asignaturas con las notas previamente asignadas
+                            //imprimo nuevamente las asignaturas con las notas recien asignadas
                             for (int i = 0; i < Alumno1.getListaAsignaturas().size(); i++) {
                                 System.out.println(Alumno1.getListaAsignaturas().get(i));
                                 Alumno1.getListaAsignaturas().get(i).resultado();
@@ -104,7 +104,7 @@ public class Main {
                             break;
                         case 2: //agregar asignaturas
 
-                            //inicialmente valido que el alumno 4 materias o menos
+                            //inicialmente valido que el alumno tenga 4 materias o menos
                             if (Alumno1.getListaAsignaturas().size()<=3) { //si se cumple se ejecutara lo siguiente
                             System.out.println("Seleccione la materia a ingresar:");
                             System.out.println("1. Calculo");
@@ -435,7 +435,7 @@ public class Main {
                                     break;
                                 default:
                                     System.out.println("Entrada incorrecta");
-                            }
+                                }
                             }else{
                                 System.out.println("El alumno no puede matricular mas asignaturas");
                             }
